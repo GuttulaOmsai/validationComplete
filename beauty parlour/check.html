@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+ function validateLogin() {
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+
+    if(username == 'omsai' && password == '12345') {
+      alert('Login successful');
+      return true;
+    } else {
+      alert('Login failed. Please check your username and password.');
+      return false;
+    }
+ }
+</script>
+</head>
+<body>
+ <form action="" method="post" onsubmit="return validateLogin()">
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username"><br>
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password"><br>
+    <input type="submit" value="Login">
+ </form>
+</body>
+</html>
